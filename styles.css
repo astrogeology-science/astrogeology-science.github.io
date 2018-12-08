@@ -1,0 +1,11 @@
+.as_title {
+    vertical-align: center;
+    vertical-align: center;
+    text-align: center;
+}
+.md-card {
+    max-width: 320px;
+    margin: 4px;
+    display: inline-block;
+    vertical-align: top;
+}

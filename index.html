@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Astrogeology-science organization</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div id="app">
+		<md-content class="md-primary md-alignment-center-center">
+    		<span class="md-headline as_title">Astrogeology-science</span>
+		</md-content>
+		<div>
+			<md-tabs class="md-primary" md-alignment="centered">
+				<md-tab id="tab-home" md-label="News">
+
+  					<div class="card-expansion">
+						<md-card>
+							<md-card-media>
+								<img src="news/news_0001/back.jpg" alt="Earth">
+							</md-card-media>
+
+							<md-card-header>
+								<div class="md-title">We took the first step</div>
+								<div class="md-subhead">2018/01/01</div>
+							</md-card-header>
+
+							<md-card-expand>
+								<md-card-actions md-alignment="space-between">
+									<div>
+										<md-button>Share</md-button>
+									</div>
+
+									<md-card-expand-trigger>
+										<md-button>Read</md-button>
+									</md-card-expand-trigger>
+								</md-card-actions>
+
+								<md-card-expand-content>
+									<md-card-content>
+										Work has begun. The first template of our site is complete. Here we will write news and publish projects about the Earth, the Solar System and the Universe.
+									</md-card-content>
+								</md-card-expand-content>
+							</md-card-expand>
+						</md-card>
+					</div>
+				</md-tab>
+				<md-tab id="tab-posts" md-label="Researches">
+					Projects and researches
+				</md-tab>
+				<md-tab id="tab-favorites" md-label="About">
+					About us
+				</md-tab>
+			</md-tabs>
+		</div>
+		<!-- </md-toolbar> -->
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-material@beta"></script>
+	<script src="index.js"></script>
+  </body>
+</html>
