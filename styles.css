@@ -4,8 +4,19 @@
     text-align: center;
 }
 .md-card {
-    max-width: 320px;
+    max-width: 420px;
+    min-width: 300px;
     margin: 4px;
-    display: inline-block;
-    vertical-align: top;
+    /*display: flex;*/
+    /*align-self: center;*/
+    /*vertical-align: top;*/
+}
+.card-holder {
+    /*max-width: 420px;*/
+    /*min-width: 300px;*/
+    /*margin: 4px;*/
+}
+.card-expansion {
+	display: flex;
+	align-items: center;
 }

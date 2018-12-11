@@ -12,43 +12,48 @@
 
   <body>
     <div id="app">
-		<md-content class="md-primary md-alignment-center-center">
-    		<span class="md-headline as_title">Astrogeology-science</span>
+		<md-content class="md-primary">
+			<div align="center">
+    			<span class="md-headline as_title">Astrogeology-science</span>
+			</div>
 		</md-content>
 		<div>
 			<md-tabs class="md-primary" md-alignment="centered">
-				<md-tab id="tab-home" md-label="News">
+				<md-tab id="tab-home" md-label="News" > 
+				<!-- -->
+					<div class="md-layout md-gutter " :class="`md-alignment-top-center`" >
+						<md-card  md-with-hover class="md-layout-item" v-for="news in content" v-bind:key="news.id">
+							<md-ripple>
 
-  					<div class="card-expansion">
-						<md-card>
-							<md-card-media>
-								<img src="news/news_0001/back.jpg" alt="Earth">
-							</md-card-media>
+								<md-card-area md-inset>
+									<md-card-header>
+										<md-card-header-text>
+											<div class="md-title">{{news.title}}</div>
+											<div class="md-subhead">{{news.subhead}}</div>
+										</md-card-header-text>
 
-							<md-card-header>
-								<div class="md-title">We took the first step</div>
-								<div class="md-subhead">2018/01/01</div>
-							</md-card-header>
+										<md-card-media md-medium>
+											<img v-bind:src="news.img" v-bind:alt="news.alt">
+										</md-card-media>
+									</md-card-header>
+								</md-card-area>
 
-							<md-card-expand>
-								<md-card-actions md-alignment="space-between">
-									<div>
-										<md-button>Share</md-button>
-									</div>
-
-									<md-card-expand-trigger>
-										<md-button>Read</md-button>
-									</md-card-expand-trigger>
+								<md-card-content v-if="news.seen">
+									{{news.content}}
+								</md-card-content>
+								<md-card-actions>
+									<md-button v-on:click="show_content(news)">
+										Read more
+									</md-button>
+									<md-button>`
+	          							<md-icon>share</md-icon>
+									</md-button>
 								</md-card-actions>
-
-								<md-card-expand-content>
-									<md-card-content>
-										Work has begun. The first template of our site is complete. Here we will write news and publish projects about the Earth, the Solar System and the Universe.
-									</md-card-content>
-								</md-card-expand-content>
-							</md-card-expand>
+							</md-ripple>
 						</md-card>
 					</div>
+
+
 				</md-tab>
 				<md-tab id="tab-posts" md-label="Researches">
 					Projects and researches
